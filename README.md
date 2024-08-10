@@ -23,18 +23,21 @@ You can view the live demo <a href="https://oyebamiji-micheal-asteroid-diameter-
 - [References](#references)
 
 <a id="overview"></a>
+
 <h2>Project Overview</h2>
 <p align="justify">
 <a href="https://www.kaggle.com/datasets/basu369victor/prediction-of-asteroid-diameter" target="_blank">One of the intriguing challenges in the field of astronomy is the prediction of asteroid diameters</a>. Asteroids, celestial bodies orbiting the Sun, come in various shapes and sizes, making the estimation of their diameters a complex task. Over the years, numerous methods and approaches have been developed to tackle this challenge, each striving to outperform its predecessors. I have decided to step outside of my domain into the realm of asteroids, aiming to leverage the power of data-driven algorithms to predict their diameters accurately to a reasonable extent. In doing so, it not only contributes to the field of space science (lol) but also demonstrates the potential of machine learning in solving complex problems in alien domains.
 </p>
 
 <a id="overview_objective"></a>
+
 <h2>Objective</h2>
 <p align="justify">
 The primary objective of this project is to address the challenging task of asteroid diameter prediction. This objective is pursued with a key intention of benchmarking against a prior work titled <a href="http://www.iraj.in/journal/journal_file/journal_pdf/12-555-156136953136-40.pdf">Prediction of Asteroid Diameter with the Help of Multi-Layer Perceptron Regressor</a> by Victor Basu. Basu's work encompasses the application of various machine learning algorithms, including XGBoost, Random Forest, ADA Boost and Multi-Layer Perceptron Regressor. Performance evaluation metrics such as mean absolute error, mean squared error, and R-squared score are used to assess the effectiveness of these models.
 </p>
 
 <a id="data"></a>
+
 <h2>Data</h2>
 <p align="justify">
 While I have familiarized myself with the data description, it's worth noting that the column names may not immediately convey their meanings to anyone reading the notebook for the first time. To enhance clarity and facilitate a deeper understanding of the dataset, concise and informative summaries have been included for each column. This addition aims to provide a clearer overview of the dataset, ensuring that anyone can grasp the context and insights more readily.
@@ -140,18 +143,20 @@ The full column description can be found in the <a href="Chaganti-Reddy/Asteroid
 </p>
 
 <a id="eda"></a>
+
 <h2>Insights From EDA</h2>
 The question of which feature(s) correlate with asteroid diameter and other related questions have I tried to answer while performing data visualization.
 
 - <p align="justify">It seems most asteroids have a diameter of 2km - 5km while others have up to 939km. In order to avoid a funny-looking plot due to the huge outlier, the data was capped using Tukey’s method before plotting. <br /><img src="images/distribution_statistics.jpeg"> <br />Capping the data before plotting allows us to see the underlying distribution of the data - right-skewed (positively skewed). Rightly skewed here means that the majority of the data points are clustered on the left side of the distribution, and there are some larger values on the right side that are pulling the mean to the right.
-</p>
+  </p>
 
 - <p align="justify">The semi-major axis of an asteroid is one-half of the major axis of the elliptical orbit. It is measured in astronomical units and describes an object's distance from the Sun. From the scatter plot below, the data points are concentrated in certain areas and all I see here is a weak correlation. <br /> <img src="images/semi_major_axis_diameter.jpeg"></p>
 
 - <p align="justify">Another feature we can look at which perhaps provides us with an estimate of diameter is the Minimum orbit intersection distance (MOID). MOID is a measure used in astronomy to assess potential close approaches and collision risks between astronomical objects. It quantifies the closest approach of the object's orbit to Earth's orbit, providing information about potential close encounters with our planet. <br /> <img src="images/moid_diameter.jpeg"> <br /> What was observed here are three clear clusters with a somewhat linear trend between each cluster. Asteroids in the first cluster seem to have a relatively small diameter. Though we can roughly conclude that asteroids in the third cluster surely have a higher diameter, it is worth keeping into consideration that a lot of asteroids in the second cluster despite having a lower EMOID, have a significantly high diameter. My takeaway from here is probably taking advantage of clustering algorithms such as K-Means which can capture this relationship. <br /><br /> These insights demonstrate the advantage of doing EDA and not only looking at correlation coefficients or scatter matrix.
-</p>
+  </p>
 
 <a id="model"></a>
+
 <h2>Model and Evaluation Metrics</h2>
 <p align="justify">
 The performance of all models used in the notebook is given below 
@@ -223,8 +228,8 @@ The performance of all models used in the notebook is given below
 In actuality, it is not feasible to directly compare my results to the one in the research paper since we do not use the same test set. However, when I compared various results from other people's notebooks on <a href="https://www.kaggle.com/datasets/basu369victor/prediction-of-asteroid-diameter/code" style="text-decoration: None">Kaggle</a>, I was able to achieve a better result just by doing a few data cleaning and feature engineering. I do not 100% trust these values though. Perhaps there are some columns in our training data which provide some think of info in the form of data leakage. Since I do not see anything related to this in the research paper, I have just simply gone with these values. <br /><img src="images/feature_importance.jpeg"> <br /><strong>Kindly note that the above feature importances are from the random forest model and not lightgbm</strong>.
 </p>
 
-
 <a id="reference"></a>
+
 <h2>References</h2>
 
 - [What is minimum orbit intersection distance (MOID)?](https://en.wikipedia.org/wiki/Minimum_orbit_intersection_distance)
