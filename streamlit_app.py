@@ -25,11 +25,11 @@ def write_project_info():
 
     st.write("""
         <p align="justify">
-            I have benchmarked my result against a <a href="http://www.iraj.in/journal/journal_file/journal_pdf/12-555-156136953136-40.pdf" target="_blank" style="text-decoration: None">research paper</a> by the 'owner' of this dataset on <a href="https://www.kaggle.com/datasets/basu369victor/prediction-of-asteroid-diameter" target="_blank" style="text-decoration: None">kaggle</a>. This web app isn't a detailed policy blueprint for comparison but testing only. For the more technical aspect including the documentation, notebook, dataset, evaluation metric, models etc, kindly refer to the repository on <a href="https://github.com/Oyebamiji-Micheal/Asteriod-Diameter-Prediction/tree/main" target="_blank" style="text-decoration: None">Github</a>.
+            I have benchmarked my result against a <a href="http://www.iraj.in/journal/journal_file/journal_pdf/12-555-156136953136-40.pdf" target="_blank" style="text-decoration: None">research paper</a> by the 'owner' of this dataset on <a href="https://www.kaggle.com/datasets/basu369victor/prediction-of-asteroid-diameter" target="_blank" style="text-decoration: None">kaggle</a>. This web app isn't a detailed policy blueprint for comparison but testing only. For the more technical aspect including the documentation, notebook, dataset, evaluation metric, models etc, kindly refer to the repository on <a href="https://github.com/Chaganti-Reddy/Asteroid-Diameter-Prediction" target="_blank" style="text-decoration: None">Github</a>.
         </p>
     """, unsafe_allow_html=True)
 
-    st.write("""**Made by Oyebamiji Micheal**""")
+    st.write("""**Made by Chaganti Reddy**""")
 
 
 def take_user_inputs():
