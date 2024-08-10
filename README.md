@@ -9,7 +9,7 @@
 
 <h3>Predicting the diameters of asteroids using machine learning and astronomical data</h3>
 
-You can view the live demo <a href="https://oyebamiji-micheal-asteroid-diameter-prediction-web-app.streamlit.app/">here.</a>
+You can view the live demo <a href="https://asteroid-diameter-prediction.streamlit.app/">here.</a>
 
 <img src="images/web_cover.jpeg" width="800" height="400">
 
