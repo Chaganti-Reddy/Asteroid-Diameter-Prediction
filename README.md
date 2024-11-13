@@ -5,7 +5,7 @@
 [![Framework](https://img.shields.io/badge/Streamlit-red.svg?style=flat&logo=streamlit&logoColor=white)](https://github.com/Oyebamiji-Micheal/Employee-Status-Prediction-Web-App/tree/main)
 ![hosted](https://img.shields.io/badge/Streamlit-Cloud-DC143C?style=flat&logo=streamlit&logoColor=white)
 ![build](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat)
-![reposize](https://img.shields.io/github/repo-size/Oyebamiji-Micheal/Asteriod-Diameter-Prediction)
+![reposize](https://img.shields.io/github/repo-size/Oyebamiji-Micheal/Asteriod-Diameter-Prediction) 
 
 <h3>Predicting the diameters of asteroids using machine learning and astronomical data</h3>
 
